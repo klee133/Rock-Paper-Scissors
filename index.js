@@ -9,6 +9,15 @@ function getComputerChoice() {
     }
     return "scissors";
 }
+// console.log(getComputerChoice());
 
-console.log(getComputerChoice());
+function getHumanChoice() {
+    let answer = prompt("Choose rock, paper, or scissors.").toLowerCase();
+    while(answer !== "rock" && answer !== "paper" && answer !== "scissors") {
+        answer = prompt("You didn't type rock, paper, or scissors. Try again.").toLowerCase();
+    }
+    return answer;
+}
+console.log(getHumanChoice());
+
 
