@@ -56,9 +56,28 @@ function playGame() {
             }
         }
     }
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-    console.log("Human: " + humanSelection + ", Computer: " + computerSelection)
-    playRound(humanSelection, computerSelection);
-    
+
+    for(let i = 0; i < 5; i++) {
+        console.log("Round " + (i+1));
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        console.log("Human: " + humanSelection + ", Computer: " + computerSelection)
+        playRound(humanSelection, computerSelection);
+    }
+
+    if(humanScore == computerScore) {
+        console.log("Your score: " + humanScore);
+        console.log("Computer's score: " + computerScore);
+        console.log("You tied with the computer!");
+    }else if(humanScore > computerScore) {
+        console.log("Your score: " + humanScore);
+        console.log("Computer's score: " + computerScore);
+        console.log("You won!");
+    }else{
+        console.log("Your score: " + humanScore);
+        console.log("Computer's score: " + computerScore);
+        console.log("You lost!");
+    }
 }
+
+playGame();
