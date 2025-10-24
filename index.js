@@ -65,17 +65,14 @@ function playGame() {
         playRound(humanSelection, computerSelection);
     }
 
+    console.log("Your score: " + humanScore);
+    console.log("Computer's score: " + computerScore);
+
     if(humanScore == computerScore) {
-        console.log("Your score: " + humanScore);
-        console.log("Computer's score: " + computerScore);
         console.log("You tied with the computer!");
     }else if(humanScore > computerScore) {
-        console.log("Your score: " + humanScore);
-        console.log("Computer's score: " + computerScore);
         console.log("You won!");
     }else{
-        console.log("Your score: " + humanScore);
-        console.log("Computer's score: " + computerScore);
         console.log("You lost!");
     }
 }
